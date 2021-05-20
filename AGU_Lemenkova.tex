@@ -41,6 +41,11 @@
 \usepackage{wrapfig}
 \usepackage{csquotes}
 
+% ------------------------ для разных буллитов в списках -------------------------------
+\usepackage{enumitem} 
+\usepackage{pifont}
+% ----------------------------------------------------------------------------
+
 % Путь к файлам с иллюстрациями
 \graphicspath{{figures/}} % path to folder with Figures
 
@@ -303,9 +308,9 @@ American Geophysical Union (AGU) \\
 Online: 24-28 May 2021 \\
 Section 'Big Data and Machine Learning'}
 \author{Polina Lemenkova}
-\institute{Schmidt Institute of Physics of the Earth, Russian Academy of Science (IPE RAS)\\
-\small{Department of Natural Disasters, Anthropogenic Hazards and Seismicity of the Earth. \\
-Laboratory of Regional Geophysics and Natural Disasters (Nr. 303)}}
+%\institute{Schmidt Institute of Physics of the Earth, Russian Academy of Science (IPE RAS)\\
+%\small{Department of Natural Disasters, Anthropogenic Hazards and Seismicity of the Earth. \\
+%Laboratory of Regional Geophysics and Natural Disasters (Nr. 303)}}
 \date{May 24, 2021}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \logo{\includegraphics[width=.25\textwidth]{AGU100_logo_H-CMYK.png}\vspace{-35pt}\hspace{10pt}}
@@ -539,13 +544,13 @@ Western Pacific (WP) and Eastern Pacific (EP) are different basins, separated by
 \begin{columns}[T]
 \begin{column}{0.4\textwidth}
 \vspace{2em}
-\begin{itemize}\small
-            \item Satellite Altimetry and Earth Observation (EO) have generated huge massives of data stored in big data repositories
-            \item GEBCO produces and makes open a range of bathymetric datasets (GEBCO-2020). 
-            \item GEBCO global gridded bathymetric datasets; GEBCO Gazetteer of Undersea Feature Names; GEBCO world map 
-            \item Advanced cartographic methodologies of GMT are capable of handling the size (e.g. large GEBCO grid), complexity of formats (with help of reformatting by AWK) and variety of data, as a response to such needs. 
-            \item Data manipulation, mapping, information extraction (metadata), visualisation $=>$ processes of big Earth data handling.            
-\end{itemize}	
+\begin{dinglist}{51}\small
+     \item Satellite Altimetry and Earth Observation (EO) have generated huge massives of data stored in big data repositories
+     \item GEBCO produces and makes open a range of bathymetric datasets (GEBCO-2020). 
+     \item GEBCO global gridded bathymetric datasets; GEBCO Gazetteer of Undersea Feature Names; GEBCO world map 
+     \item Advanced cartographic methodologies of GMT are capable of handling the size (e.g. large GEBCO grid), complexity of formats (with help of reformatting by AWK) and variety of data, as a response to such needs. 
+     \item Data manipulation, mapping, information extraction (metadata), visualisation $=>$ processes of big Earth data handling.            
+\end{dinglist}	
 \end{column}
 \begin{column}{0.6\textwidth}
 \vspace{2ex}
@@ -579,10 +584,10 @@ Western Pacific (WP) and Eastern Pacific (EP) are different basins, separated by
 		\includegraphics[width=5cm]{Fig-KKT6.jpg}
 	\caption{Cross-section profiles of the Kuril-Kamchatka Trench. Plotting: Octave}\label{fig:KKT6}
 \end{figure}
-\begin{itemize}\scriptsize
-           \item Modelling geospatial data using ML methods and programming languages enables to detect hidden correlations and patterns that a human may not see. 
-            \item Inaccessible location $=>$ seafloor of the deep-sea trenches can only be visualized using modelling tools and programming approach
-\end{itemize}
+\begin{dinglist}{224}\scriptsize
+     \item Modelling geospatial data using ML methods and programming languages enables to detect hidden correlations and patterns that a human may not see. 
+     \item Inaccessible location $=>$ seafloor of the deep-sea trenches can only be visualized using modelling tools and programming approach
+\end{dinglist}
 \end{column}
 \end{columns}
 \end{minipage}
@@ -599,25 +604,25 @@ Western Pacific (WP) and Eastern Pacific (EP) are different basins, separated by
 	\caption{ETOPO1 grid for topographic mapping: example of Aleutian Trench}\label{fig:AT1}
 \end{figure}
 Solutions of GMT: 
-\begin{itemize}\footnotesize
-	\item Advanced level of cartographic functionality: variety of projections, data processing, import/export, etc
-	 \item High-quality cartographic solutions: colour palettes, layouts, grids, vector lines, advanced design approaches
-	 \item Flexibility of coding / shell scripting from UNIX console
-	 \item Embedded data analysis and visualisation: mapping, modelling, logical queries, \\ statistical analysis, import/export, vector and raster processing
-\end{itemize}
+ \begin{dingautolist}{202}\footnotesize
+     \item Advanced level of cartographic functionality: variety of projections, data processing, import/export, etc
+     \item High-quality cartographic solutions: colour palettes, layouts, grids, vector lines, advanced design approaches
+     \item Flexibility of coding / shell scripting from UNIX console
+     \item Embedded data analysis and visualisation: mapping, modelling, logical queries, \\ statistical analysis, import/export, vector and raster processing
+\end{dingautolist}
 \end{frame}
 
 % ----------------------------------------------------------------------------
 \begin{frame}\frametitle{Data Integration}
 \vspace{1em}
 Multi-source data mixing and integration using GMT adjustments:
-\begin{itemize}\small
-         \item Open Data Mining (e.g. GEBCO, ETOPO1, geological datasets and other open sources) 	
-         \item Predictive analytics in geology: forecasting and prognosis in hazard risk assessment
-	\item Simulation modeling in Earth sciences: earthquakes, landslides, volcanic activity, seismicity
-	\item Data analysis by GMT has potential to advance development of cartography
-	\item It enables scientific discoveries, based on spatial analysis in geology
-\end{itemize}	
+ \begin{dingautolist}{172}\small
+     \item Open Data Mining (e.g. GEBCO, ETOPO1, geological datasets and other open sources) 
+     \item Predictive analytics in geology: forecasting and prognosis in hazard risk assessment
+     \item Simulation modeling in Earth sciences: earthquakes, landslides, volcanic activity, seismicity
+     \item Data analysis by GMT has potential to advance development of cartography
+     \item It enables scientific discoveries, based on spatial analysis in geology
+\end{dingautolist}	
    
 \begin{figure}[H]
 	\centering
@@ -642,14 +647,14 @@ Multi-source data mixing and integration using GMT adjustments:
 \begin{column}{0.4\textwidth}
 \vspace{2em}
 An example of data analysis \\using GMT: Guatemala Trench: 
-\begin{itemize}\footnotesize
-            \item MAT geometry demonstrates its relatively steep and strait shape.  
-            \item major depth samples: between the -3000 and -6200 m; seafloor 3-5 km wide.
-            \item frequency samples distribution shows changes by profiles. Increase of frequency between -3000 to -4000 m caused by the geologic settings of the Cocos Plate. 
-            \item the deepest depth data range with 1,111 records takes 25\% of the samples. 
-            \item mean sample values: -2,200, and 7,5\% at -4,000 to -3,500 m
-            \item median values: -3,200 to -3,300 m. 
-\end{itemize}		
+ \begin{dinglist}{52} \scriptsize
+     \item MAT geometry demonstrates its relatively steep and strait shape. 
+     \item major depth samples: between the -3000 and -6200 m; seafloor 3-5 km wide.
+     \item frequency samples distribution shows changes by profiles. Increase of frequency between -3000 to -4000 m caused by the geologic settings of the Cocos Plate. 
+     \item the deepest depth data range with 1,111 records takes 25\% of the samples. 
+     \item mean sample values: -2,200, and 7,5\% at -4,000 to -3,500 m
+     \item median values: -3,200 to -3,300 m. 
+ \end{dinglist}  		
 \end{column}
 \end{columns}
 \end{minipage}
@@ -710,14 +715,14 @@ An example of data analysis \\using GMT: Guatemala Trench:
 \end{alertblock}
 
 \begin{exampleblock}{Big Earth data technologies benefit geoscience research}
-\begin{itemize}\footnotesize
-	\item Visualisation of the analytical data: e.g. bathymetric analysis
-	\item Analysis of big Earth data reveals the topography of the Peru-Chile Trench (PCT), a.k.a. Atacama Trench
-	\item PCT - the longest Pacific trench (5900 km)
-	\item PCT stretches from Ecuador to Chile and covers area of ca. 590,000 km$^2$
-	\item PCT is narrower compared to other Pacific trenches (64 km width). 
-	\item Max depth 8065 m $=>$ deepest trench in South PO        
-\end{itemize}
+\begin{dinglist}{43}\footnotesize
+     \item Visualisation of the analytical data: e.g. bathymetric analysis
+     \item Analysis of big Earth data reveals the topography of the Peru-Chile Trench (PCT), a.k.a. Atacama Trench
+     \item PCT - the longest Pacific trench (5900 km)
+     \item PCT stretches from Ecuador to Chile and covers area of ca. 590,000 km$^2$
+     \item PCT is narrower than other Pacific trenches (64 km). 
+     \item Max depth 8065 m $=>$ deepest trench in South PO        
+\end{dinglist}
 \end{exampleblock}	
 
 \end{column}
@@ -725,7 +730,7 @@ An example of data analysis \\using GMT: Guatemala Trench:
 \end{minipage}
 \end{frame}
 
- % ----------------------------------------------------------------------------
+% ----------------------------------------------------------------------------
 \begin{frame}\frametitle{Peru-Chile Trench}
 \vspace{2em}
 \begin{minipage}[0.4\textheight]{\textwidth}
@@ -743,10 +748,10 @@ An example of data analysis \\using GMT: Guatemala Trench:
 		\includegraphics[width=6cm]{Fig-PCT6.jpg}
 	\caption{Cross-section profiles of the Peru-Chile Trench}\label{fig:PCT6}
 \end{figure}
-\begin{itemize}\scriptsize
+\begin{dingautolist}{192}\scriptsize
 	\item Automatic modelling of trenches to study landforms, detect correlation with geologic and tectonic settings
 	\item Automatization in data analysis: automated digitizing of the cross-section profiles
-\end{itemize}
+\end{dingautolist}
 \end{column}
 \end{columns}
 \end{minipage}
@@ -771,14 +776,14 @@ An example of data analysis \\using GMT: Guatemala Trench:
 		\includegraphics[width=6.0cm]{Fig-H2.jpg}
 	\caption{Modeled cross-section profiles of the Hikurangi Trench}\label{fig:H2}
 \end{figure}
-\begin{itemize}\scriptsize
-            \item Unique tectonic setting of the region consist in the connection of two subduction zones
-            \item 2 subduction zones: N (Hikurangi margin) and S (Puysegur margin), connected by oblique continental collision along the Alpine Fault located in the South Island, NZ
-            \item Connected by oblique continental collision along the Alpine Fault: South Island, NZ
-            \item $=>$ Variations in the submarine geomorphic structure of the trenches which is also referred as “subduction scissor” 
-            \item Puysegur/Hjort subduction is highly oblique (dextral) and directed southwards. 
-            \item Hikurangi subduction is directed northwestwards. The South Island is caught in between by “subduction scissor”. 
-\end{itemize}	
+\begin{dinglist}{105}\scriptsize
+     \item Various cartographic techniques can be used for modelling and mapping of deep-sea trenches in the Pacific Ocean.
+     \item Advanced cartographic techniques consist in two important characteristics: they are \textcolor{red}{script-based} and \textcolor{red}{data-driven}
+     \item Cartographic scripting is a console-based technique that provides detailed stepwise controlling of the cartographic workflow enabling rapid mapping    
+     \item Rapid mapping by GMT enables visualisation and representation of the tectonic processes in the seafloor 
+     \item Accurate mapping helps more thoughtful interpretation of the underlying tectonic processes affecting the geomorphology of the trench. 
+     \item Data-driven techniques use Earth big data to capture the correlation between geological, tectonic and bathymetric variables
+\end{dinglist}
 \end{column}
 \end{columns}
 \end{minipage}
@@ -803,14 +808,12 @@ An example of data analysis \\using GMT: Guatemala Trench:
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=5.5cm]{Fig-P2.jpg}
-		\caption{Modeled cross-section profiles of the Puysegur an Hjort trenches}\label{fig:P2}
+		\caption{Modeled cross-section profiles of the Puysegur and Hjort trenches}\label{fig:P2}
 \end{figure}
-\begin{itemize}\scriptsize
-            \item Puysegur subduction is highly oblique (dextral), directed S. 
-            \item PT: Bimodal way of DD : clear peaks at ranges -4,200 to -4,400 (373 s.) and at -3,200 to -3,000 m (140 s.). 
-            \item HT: histogram has classic ‘bell-shape’ form with one peak in DD at -3,300 to -3,500 m (364 s.).
-            \item HT: equal DD (not oblique). 
-\end{itemize}	
+ \begin{dinglist}{234}\scriptsize
+     \item GMT-based mapping techniques have the advantage of increased speed, accuracy and precision of mapping which enables rapid big data processing
+     \item Validity and utility of data models in GMT are based on embedded mathematical algorithms of data modelling and cartographic principles enabling deeper understanding of the underlying processes affecting the shape of the trench
+\end{dinglist}	
 \end{column}
 \end{columns}
 \end{minipage}
@@ -830,17 +833,15 @@ An example of data analysis \\using GMT: Guatemala Trench:
 	\caption{Topographic map and location of the Kermadec and Tonga trenches. \cite{Lemenkova201994}}\label{fig:TK1}
 \end{figure}
 \end{column}
-\begin{column}{0.5\textwidth}
-\begin{itemize}\scriptsize
-            \item KT is located 120 km off the New Zealand with axis continues 26\degree S -- 36\degree S \cite{Duncan}
-            \item TT is \nth{2} deepest trench in the world (max depths of 10,882 m) \cite{Blankenship}. 
-            \item KT is the \nth{5} world's deepest trench, max depth 10,177 m, length 1500 km \cite{Jamiesonetal2011}
-            \item KT and TT closeness to the Antarctic $=>$  among the world's coldest trenches \cite{Belyaev}
-            \item KT runs parallel to the Kermadec Ridge with geomorphology of V- shape formed by tectonic subduction of the Pacific Plate under the Indo-Australian Plate \cite{LeducRowden2018}
-            \item The specific tectonic setting is the subduction of the PP at a rapid rate beneath the Indo-Australian Plate along the TT and KT
-            \item A convergence at max rate (ca. 249 mm/yr) along the TK arc system $=>$ one of the world's most seismically active subduction zones \cite{Bevis}
-            \item Both trench axes have roughly 30\degree slight from the longitude line.
-\end{itemize}	
+\begin{column}{0.38\textwidth}
+
+ \begin{dinglist}{46}\footnotesize
+     \item In order to analyse the geomorphology of the seafloor landforms, it is important to use  \textcolor{red}{powerful cartographic tools}, such as  \textcolor{red}{GMT} that can handle \textcolor{red}{big Earth data}
+      \item \textcolor{red}{Modelling links} among seafloor geomorphology, tectonics and geology requires more deep insights into geologic evolution of the Pacific Ocean and current topography of the seabed
+      \item However, visualisation of the hidden relief of the seafloor can be difficult without \textcolor{red}{high-tech cartographic solutions}
+      \item Cartographic applications of machine learning as scripts provides better techniques in understanding the links of geology, seismicity and bathymetry 
+      \item \textcolor{red}{Accurate and rapid mapping} enables to efficiently analyse impact factors controlling geomorphological structures through observing big Earth data related to interactions among seafloor geomorphology and tectonics 
+ \end{dinglist}	
 \end{column}
 \end{columns}
 \end{minipage}
@@ -863,20 +864,14 @@ An example of data analysis \\using GMT: Guatemala Trench:
 \end{figure}
 \end{column}
 \begin{column}{0.4\textwidth}
-What can we conclude comparing two trenches ? (Tonga and Kermadec): 
-\begin{itemize}\footnotesize
-            \item TT has shallower depths on the eastern part along but KT has more abrupt shape with 2,641 depth records s from -6,600 to -6,800m. 
-            \item TT geomorphology has steeper gradient slope on the western flank. 
-            \item TT deepest values $>9,000$m: 320 observation samples 
-            \item KT deepest values $>9,000$m: 251 samples $=>$  TT is deeper than KT.
-            \item KT has more values in this range: 6167 samples. For the TT, the same range gives 4803.
-            \item KT has more gentle slope shape form and shallower depths of the western slope off Tonga Ridge. 
-            \item Variations of the seafloor depths at range from -6,000 to -5,000.
-            \item Variation between KT and TT illustrates tectonic and geological local settings $=>$ different sedimentation of the KT and TT  $=>$ different geomorphic shape despite close location             
-\end{itemize}	
-\begin{itemize}\footnotesize
-            \item 
-\end{itemize}
+
+\begin{dinglist}{47}\footnotesize
+     \item Applying machine learning and scripting techniques of GMT in cartography for mapping seafloor helps tackling problems relating to \textcolor{red}{analysing, mapping, visualising and cross-section modelling} of the submarine geomorphology of the trenches.
+      \item Big Earth data come from different \textcolor{red}{heterogeneous sources} and are spatially not uniform. 
+      \item Big Earth data are of \textcolor{red}{varying spatio-temporal resolution and origin} which understandably poses some problems to use raw data for mapping and requires \textcolor{red}{data pre-processing, sorting and management}.
+      \item Therefore, \textcolor{red}{common resolution} is required in order to perform Earth \textcolor{red}{data integration} and spatial analysis in a project of Pacific Ocean 
+\end{dinglist}  	
+
 \end{column}
 \end{columns}
 \end{minipage}
@@ -990,50 +985,24 @@ Key points on the comparative analysis of the geomoprhic modelling of Vityaz and
 % ----------------------------------------------------------------------------
 % *** START Philippine Trench <<<
 % ----------------------------------------------------------------------------
-\section{Ph}
-
-\begin{frame}\frametitle{Philippine Trench}
-\begin{minipage}[0.4\textheight]{\textwidth}
-\begin{columns}[T]
-\begin{column}{0.5\textwidth}
-\vspace{3em}
-	\includegraphics[width=6.0cm]{Fig-Ph2.jpg}
-\end{column}
-\begin{column}{0.5\textwidth}\footnotesize
-\vspace{2em}
-	Key points on the QGIS digitizing: 
-\begin{itemize}
-            \item The 1.000 km long profiles were drawn along the trench using 'Add Line Feature' tool from the Digitizing Toolbar.
-            \item The intersections between the lines and the bathymetry was done using ‘Vector / Analysis Tools / Lines Intersection’ command. This resulted in the array of the points along each profile. Each point has now a bathymetry depth value and a point reference number.
-            \item Lat/lon coordinates were added to the attribute table of each intersection line of the profiles using plugin 'Lat Lon Tools / Conversion / Point layer to fields'. 
-            \item This added the 25 layer's latitude, longitude (Y, X) and copied into the text fields in the new layers. 
-            \item The topography was plotted using 'ProfileFromPoints' plugin, along a profiles centerline using elevation Z (depths). 
-            \item The attribute tables were exported from the QGIS she files ('Export / Save Features As') to csv format for each of the profiles.
-            \item The results are shown left.         
-            \item The csv table was then further processed by Python and R.
-\end{itemize}
-\end{column}
-\end{columns}
-\end{minipage}
-\end{frame}
 
 \begin{frame}\frametitle{Philippine Trench}
 \vspace{1em}
 \begin{figure}[H]
 	\centering
-		\includegraphics[width=7.0cm]{Fig-Ph08.jpg}
+		\includegraphics[width=8.0cm]{Fig-Ph08.jpg}
 	\caption{Plotting by Python (Matplotlib library): distribution of the bathymetric samples of the cross-section profiles, PhT}\label{fig:Ph08}
 \end{figure}
-\vspace{1em}
+%\vspace{1em}
 \begin{exampleblock}{Data Processing by Python}
-\begin{itemize}\footnotesize
-	\item Python can handle a huge amount of data, which it uses not only to process, but also to create analytical plots, such as assessment of bathymetric variability or analytics in geology. 
-	 \item Big data analysis in Python is based on a full range of algorithms used in statistics
-	 \item Statistical analysis: well developed stand-alone libraries (Matplotlib, SciPy, NumPy, Pandas, StatsModels)
-	 \item Beauty \& elegance of graphs: advanced design solutions for data visualization in Matplotlib \& Seaborn
-	 \item Scripting approach with more readable syntax
-	 \item Open-source
-\end{itemize}
+ \begin{dinglist}{46}\footnotesize
+     \item Python can handle a huge amount of data, which it uses not only to process, but also to create analytical plots, such as assessment of bathymetric variability or analytics in geology. 
+     \item Big data analysis in Python is based on a full range of algorithms used in statistics
+     \item Statistical analysis: well developed stand-alone libraries (Matplotlib, SciPy, NumPy, Pandas, StatsModels)
+     \item Beauty \& elegance of graphs: advanced design solutions for data visualization in Matplotlib \& Seaborn
+     \item Scripting approach with more readable syntax
+     \item Open-source
+\end{dinglist}
 \end{exampleblock}
 \end{frame}
 
@@ -1043,33 +1012,16 @@ Key points on the comparative analysis of the geomoprhic modelling of Vityaz and
 \begin{column}{0.5\textwidth}
 \vspace{2em}
 	\includegraphics[width=5.7cm]{Fig-Ph09.jpg}
-Correlation matrix by Spearman method visualizing influence of the impact factors on the geomorphology of the profiles. Plotting: R.
+ \begin{dinglist}{105}\footnotesize
+     \item Example of data analysis by R: correlation matrix visualising \textcolor{red}{influence of impact factors} affecting the geomorphology of the profiles. Plotting: R.
+\end{dinglist} 
 \end{column}
 \begin{column}{0.5\textwidth}
 \vspace{2em}
 	\includegraphics[width=5.7cm]{Fig-Ph10.jpg}
-Ranking geomorphology of the cross-section profiles. Plotting: R.
-\end{column}
-\end{columns}
-\end{minipage}
-\end{frame}
-
-\begin{frame}\frametitle{Philippine Trench}
-\begin{minipage}[0.4\textheight]{\textwidth}
-\begin{columns}[T]
-\begin{column}{0.5\textwidth}
-\vspace{2em}
-	\includegraphics[width=5.5cm]{Fig-Ph11.jpg}
-\end{column}
-\begin{column}{0.5\textwidth}
-\vspace{2em}
-Key points on the regression analysis by R: 
-\begin{itemize}
-            \item For the assessment of the variation in the geomorphology of the trench, it is of significant advantage to visualize the data set using regression analysis (Fig. left).
-            \item Regression analysis determines the range, general trend in data distribution and scale of the changes in the observed bathymetry by analyzing changes in the values of the elevation.
-            \item  The algorithms and approaches for the performed regression analysis use existing methods and embedded in \{ggplot\} library of R.
-            \item Advantages of plotting a facetted graph consists in visualizing a stream of the data at one look. 
-\end{itemize}
+\begin{dinglist}{105}\footnotesize
+     \item Analysing the interactions between the variables in big datasets by R presents a solution to \textcolor{red}{visualising heterogeneity} of topographic features formed under various geologic setting: ranking geomorphology of the cross-section profiles. 
+\end{dinglist}
 \end{column}
 \end{columns}
 \end{minipage}
@@ -1095,13 +1047,8 @@ Key points on the regression analysis by R:
 \end{column}
 \begin{column}{0.5\textwidth}
 \vspace{2em}
-	Key points on the Trench: 
 \begin{itemize}
-            \item located in South China Sea, west Pacific Ocean, west of islands Luzon and Mindoro, Philippines. 
-            \item located in the Manila subduction zone at the Philippine Sea plate boundary where it moves NW to the Eurasian plate with a high convergence rate \cite{Lo2017}
-            \item depth ca 5,400 m \cite{Liuetal2007}, stretches in almost vertical NS direction is created by the subduction of the Eurasian Plate (its part Sunda Plate) under the Philippine Sea Plate
-            \item repetitive earthquakes, seismicity \cite{Wu2009}
-            \item frequent destructive tsunami hazard, by the subducting slab of the Eurasian plate beneath the MT $=>$ catastrophic damages along the coastlines of the Luzon Island.
+            \item 
 \end{itemize}
 \end{column}
 \end{columns}
@@ -1124,14 +1071,8 @@ Key points on the regression analysis by R:
 \end{column}
 \begin{column}{0.5\textwidth}
 \vspace{2em}
-	Key points on the Trench: 
 \begin{itemize}
-            \item RT is 1400 km long, stretches along the SE edge of the Ryukyu Arc, between Taiwan \& Kyushu \cite{Ando}. 
-            \item located to NW of the Ryukyu Arc, a back-arc basin and depression of the Okinawa Trough
-            \item formed as a result of the subduction of the oceanic crust of the PSP beneath the continental crust of the EP  \cite{Doo}. 
-            \item bathymetry varies in its N and S parts of RT: correlation bw. shape, gradient slope steepness, tectonics 
-            \item N: the subduction of the PSP is notable for shallow depths and steepness, reaches ca. 11\degree. 
-            \item on the contrary, S: angle becomes steeper, reaching 70\degree below ca. 70 km.
+            \item 
 \end{itemize}
 \end{column}
 \end{columns}
@@ -1178,8 +1119,12 @@ Key points on the regression analysis by R:
 \begin{minipage}[0.4\textheight]{\textwidth}
 \begin{columns}[T]
 \begin{column}{0.6\textwidth}
-\vspace{3em}
-	\includegraphics[width=7.0cm]{Fig-YPT7.jpg}
+\vspace{2em}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=7.0cm]{Fig-YPT7.jpg}
+	\caption{Automatically digitised profiles of Yap and Palau trenches}\label{fig:H1}
+\end{figure}
 \end{column}
 \begin{column}{0.4\textwidth}
 \vspace{2em}
@@ -1204,17 +1149,56 @@ Key points on the regression analysis by R:
 \begin{minipage}[0.4\textheight]{\textwidth}
 \begin{columns}[T]
 \begin{column}{0.4\textwidth}
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=6.0cm]{Fig-MT1.jpg}
-	\caption{Topographic map and location of the Mariana Trench. \cite{Lemenkova201992}}\label{fig:MT1}
-\end{figure}
+ \begin{dinglist}{254}\small
+     \item Large amount of Earth data brings a technical problem: how we can \textcolor{red}{extract necessary information} from the massive quantities (millions) of cells, pixels and variables?
+     \item The answer to this question: effective means of statistical data analysis by \textcolor{red}{Python or R} (Julia, MATLAB/Octave) can help analyse, visualise and model data.
+     \item \textcolor{red}{Automatisation of the massive digital data processing} for effective cartographic visualisation and statistical modelling. 
+     \item As a response to such needs, \textcolor{red}{scripting cartography} and \textcolor{red}{statistical libraries} of the programming languages present effective and advanced approach in Earth data analysis and modelling. 
+\end{dinglist}
 \end{column}
 \begin{column}{0.6\textwidth}
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=5.0cm]{Fig-MT20.jpg}
 	\caption{Project Mindmap. Plotting: \LaTeX \space \cite{Lemenkova201993}}\label{fig:MT20}
+\end{figure}	
+\end{column}
+\end{columns}
+\end{minipage}
+\end{frame}
+
+ % ----------------------------------------------------------------------------
+\begin{frame}\frametitle{Mariana Trench}
+\vspace{2em}
+\begin{minipage}[0.4\textheight]{\textwidth}
+\begin{columns}[T]
+\begin{column}{0.4\textwidth}
+\begin{itemize}\footnotesize
+	\item Various GMT techniques and modules have been used for rapid and accurate mapping
+	\item Main GMT modules:
+	\begin{dinglist}{224}\footnotesize
+		\item  \textcolor{SlateBlue}{gmt makecpt} for making color palette
+		\item  \textcolor{SlateBlue}{gmt grdimage} for generating raster image
+		\item  \textcolor{SlateBlue}{gmt psscale} for adding legend for adding scale
+		\item  \textcolor{SlateBlue}{gmt grdcontour} for adding isolines
+		\item  \textcolor{SlateBlue}{gmt psbasemap} for adding grid
+		\item  \textcolor{SlateBlue}{gmt psbasemap} for adding scale and directional rose
+		\item  \textcolor{SlateBlue}{echo} UNIX utility for adding text labels
+		\item  \textcolor{SlateBlue}{gmt pstext} for adding subtitle
+		\item  \textcolor{SlateBlue}{gmt logo} for adding GMT logo
+		\item  \textcolor{SlateBlue}{gmt psconvert} for convert PS to image (by GhostScript interpreter)
+	 \end{dinglist}
+\end{itemize}
+\begin{itemize}\footnotesize
+	\item As a result, plotting a map by GMT becomes a rapid procedure, fully controlled by the cartographer 
+	\item Such automatisation by GMT facilitates mapping and decreases time of cartographic workflow
+\end{itemize}
+\end{column}
+\begin{column}{0.6\textwidth}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=6.0cm]{Fig-MT1.jpg}
+	\caption{Topographic map and location of the Mariana Trench. \cite{Lemenkova201992}}\label{fig:MT1}
 \end{figure}	
 \end{column}
 \end{columns}
@@ -1230,7 +1214,10 @@ Key points on the regression analysis by R:
 	\caption{Kernel Density Estimation (KDE) for the profiles bathymetry. \\
 	Python libraries: Matplotlib, Seaborn, Pandas \cite{Rossumatal2018}. \cite{Lemenkova201905}}\label{fig:MT11}
 \end{figure}
-\small{Kernel Density Estimation (KDE) analysis shows combining five plots of the bathymetric cross-section profiles. It shows range of the density distribution in the elevations across the Mariana Trench}
+\begin{dinglist}{109}\footnotesize
+     \item Example of Python based data analysis: Kernel Density Estimation (KDE) analysis showing facetted plots of the cross-section profiles. 
+     \item It shows the range of density distribution in the elevations across the Mariana Trench
+\end{dinglist} 
 \end{frame}
 
  % ----------------------------------------------------------------------------
@@ -1243,11 +1230,12 @@ Key points on the regression analysis by R:
 \end{figure}
 
 Key points on the ridgeline plot by R:
-\begin{itemize}\footnotesize
-	\item Ridgeline plot shows data distribution aimed to understand the variability of elevations as a stream view
-	\item Ridgeline profiling shows a comparative visualization of the density distribution of depths by profiles
-	\item Ridgelin provides the insight into the statistical distribution of the elevation ranges in the Mariana Trench.
-\end{itemize}
+\begin{dinglist}{96}\footnotesize
+	\item Analysing the interactions between the variables in big datasets by R presents a solution to \textcolor{red}{visualising heterogeneity} of topographic features formed under various geologic setting
+	\item Ridgeline plot shows \textcolor{red}{data distribution} aimed to understand the variability of elevations as a \textcolor{red}{stream view}
+	\item Ridgeline profiling shows a comparative visualisation of the \textcolor{red}{density distribution} of depths by profiles
+	\item Ridgeline plot provides the insight into the statistical distribution of the \textcolor{red}{elevation ranges} in the Mariana Trench.
+\end{dinglist}
 \end{frame}
 
  % ----------------------------------------------------------------------------
@@ -1259,14 +1247,7 @@ Key points on the ridgeline plot by R:
 \begin{column}{0.4\textwidth}
 Key points on the Izu-Bonin Trench (IBT): 
 \begin{itemize}
-            \item IBT a.k.a. Izu-Ogasawara Trench is located in west Pacific Ocean, lies south of Japan
-            \item In its structure, IBT continues the JT. The Izu-Bonin Trench is formed in the area of active tectonic subduction of the Cretaceous (135 Ma) PP beneath the PSP \cite{Sanoetal2016}
-            \item As a consequence of this subduction the following structured are formed (volcanic arc of the on the Izu-Bonin-Mariana Arc system): 
-            	\begin{itemize}
-           		\item Izu Island 
-			\item Bonin Islands 
-		 	\item Shikoku Basin as a backarc basin 
-		\end{itemize}
+            \item 
 \end{itemize}
 \end{column}
 \begin{column}{0.5\textwidth}
